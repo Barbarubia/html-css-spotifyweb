@@ -48,6 +48,7 @@ header { /* Header impostato verticalmente a destra */
     width: 15rem;
     height: calc(100vh - 5rem);
     background-color: var(--black);
+    padding: 1rem;
 }
 
 main { /* Sezione principale della webapp */
@@ -76,4 +77,12 @@ footer { /* Barra dei comandi in basso */
     border-radius: 3rem;
     margin-right: 1.5rem;
     padding: .5em 2em;
+}
+
+
+
+/* HEADER LATERALE */
+
+header .logo img {
+    width: 150px;
 }
