@@ -16,15 +16,14 @@
     --white: #ffffff;
 }
 
-body:after {
-    content: "";
-    display: table;
-    clear: both;
+body {
+    display: flex;
+    flex-flow: row wrap;
 }
 
 html {
     font-family: 'Montserrat', sans-serif;
-    /* color: var(--white); */
+    color: var(--white);
 }
 
 /* CONTENITORI DELLE VARIE SEZIONI */
@@ -33,24 +32,23 @@ html {
     position: absolute;
     top: 0;
     right: 0;
-    width: calc(100% - 10rem);
+    width: calc(100% - 15rem);
     height: 5rem;
     background-color: var(--semiblack);
 }
 
 header {
-    float: left;
-    width: 10rem;
+    width: 15rem;
     background-color: var(--black);
     height: calc(100vh - 5rem);
 }
 
 main {
-    float: left;
-    width: calc(100% - 10rem);
-    background-color: /*var(--darkblue)*/ cyan;
+    width: calc(100% - 15rem);
+    background-color: var(--darkblue);
     height: calc(100vh - 5rem);
     overflow: auto;
+    padding: 1rem;
 }
 
 footer {
