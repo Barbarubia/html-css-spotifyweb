@@ -13,36 +13,44 @@
     --semiblack: rgba(0,0,0,.5);
     --grey: #282828;
     --darkblue: #141922;
+    --white: #ffffff;
+}
+
+body:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 html {
     font-family: 'Montserrat', sans-serif;
+    /* color: var(--white); */
 }
 
 /* CONTENITORI DELLE VARIE SEZIONI */
 
-header {
+.banner {
     position: absolute;
     top: 0;
     right: 0;
-    width: calc(100% - 5rem);
+    width: calc(100% - 10rem);
     height: 5rem;
     background-color: var(--semiblack);
 }
 
-.container-flex {
-    display: flex;
-}
-
-aside {
-    width: 5rem;
+header {
+    float: left;
+    width: 10rem;
     background-color: var(--black);
     height: calc(100vh - 5rem);
 }
 
 main {
-    background-color: var(--darkblue);
+    float: left;
+    width: calc(100% - 10rem);
+    background-color: /*var(--darkblue)*/ cyan;
     height: calc(100vh - 5rem);
+    overflow: auto;
 }
 
 footer {
