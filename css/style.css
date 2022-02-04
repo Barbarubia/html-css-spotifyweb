@@ -12,9 +12,9 @@
 
 :root {
     --black: #000000;
-    --semiblack: rgba(0,0,0,.5);
+    --semiblack: rgba(0,0,0,.4);
     --grey: #282828;
-    --lightgrey: #696969;
+    --lightgrey: #a3a3a3;
     --darkblue: #141922;
     --white: #ffffff;
 }
@@ -31,7 +31,7 @@ html {
 
 
 
-/* CONTENITORI DELLE VARIE SEZIONI */
+/* POSIZIONAMENTO E DIMENSIONI DEI CONTENITORI DELLE VARIE SEZIONI */
 
 .banner { /* Banner in alto con collegamento a premium */
     position: absolute;
@@ -39,18 +39,12 @@ html {
     right: 0;
     width: calc(100% - 15rem);
     height: 5rem;
-    background-color: var(--semiblack);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
     z-index: 9;
 }
 
 header { /* Header impostato verticalmente a destra */
     width: 15rem;
     height: calc(100vh - 5rem);
-    background-color: var(--black);
-    padding: 1rem;
 }
 
 main { /* Sezione principale della webapp */
@@ -73,6 +67,13 @@ footer { /* Barra dei comandi in basso */
 
 /* BANNER IN ALTO CON COLLEGAMENTO A PREMIUM */
 
+.banner {
+    background-color: var(--semiblack);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .banner button {
     font-size: .7rem;
     font-weight: 600;
@@ -94,23 +95,15 @@ footer { /* Barra dei comandi in basso */
 
 /* HEADER LATERALE */
 
-header .logo {
-    height: 5rem;
+header {
+    background-color: var(--black);
+    padding: 0 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
 }
 
-header .logo img {
-    width: 150px;
-}
-
-header .menu-sections ul {
-    list-style: none;
-}
-
-header .menu-sections li {
-    margin: .5rem 0;
-}
-
-header .menu-sections .button-menu-sections {
+header .button-header {
     background: none;
     border: none;
     font-weight: 600;
@@ -121,6 +114,102 @@ header .menu-sections .button-menu-sections {
     cursor: pointer;
 }
 
-header .menu-sections .button-menu-sections img {
+header .button-header span {
+    margin-left: .5rem;
+}
+
+header .button-header img {
     height: 25px;
+}
+
+.header-top {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+
+.header-top .logo {
+    height: 5rem;
+    padding: 1rem 0;
+}
+
+.header-top .logo img {
+    width: 150px;
+}
+
+/* Menu sezioni */
+
+.header-top .menu-sections ul {
+    list-style: none;
+}
+
+.header-top .menu-sections li {
+    margin: .5rem 0;
+}
+
+/* Elenco playlists */
+
+.header-top .playlist h1 {
+    font-size: 1rem;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.header-top .playlist .button-plus {
+    height: 35px;
+    width: 35px;
+    font-size: 1.8rem;
+    background-color: var(--lightgrey);
+    color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-top .playlist ul {
+    list-style: none;
+}
+
+.header-top .playlist a {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--lightgrey);
+}
+
+/* NON FUNZIONA!!!! RIVEDERE */
+.header-top .playlist-list {
+    overflow-y: auto;  
+}
+
+/* Download app */
+
+.header-bottom .button-download img {
+    height: 15px;
+}
+
+/* Riga orizzontale Header */
+
+.header-bottom hr {
+    margin: .5rem 0;
+    color: var(--lightgrey)
+}
+
+/* Utente */
+
+.header-bottom .user {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.header-bottom .user img {
+    height: 25px;
+    background-color: var(--lightgrey);
+    border-radius: 50%;
+}
+
+.header-bottom .user span {
+    font-weight: 600;
+    color: var(--white);
+    margin-left: .5rem;
 }
