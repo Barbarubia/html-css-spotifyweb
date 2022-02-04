@@ -56,7 +56,7 @@ main { /* Sezione principale della webapp */
     height: calc(100vh - 5rem);
     background-color: var(--darkblue);
     overflow: auto;
-    padding: 1rem;
+    padding: 6rem 1rem 1rem 1rem;
 }
 
 footer { /* Barra dei comandi in basso */
@@ -70,6 +70,7 @@ footer { /* Barra dei comandi in basso */
 /* BANNER IN ALTO CON COLLEGAMENTO A PREMIUM */
 
 .banner button {
+    font-size: .8rem;
     text-transform: uppercase;
     color: var(--white);
     background: none;
@@ -77,6 +78,11 @@ footer { /* Barra dei comandi in basso */
     border-radius: 3rem;
     margin-right: 1.5rem;
     padding: .5em 2em;
+    cursor: pointer;
+}
+
+.banner button:hover {
+    transform: scale(1.1);
 }
 
 
