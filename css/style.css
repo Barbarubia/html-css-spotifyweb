@@ -98,12 +98,15 @@ footer { /* Barra dei comandi in basso */
 header {
     background-color: var(--black);
     padding: 0 1rem;
+    overflow: hidden;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
 }
 
 header .button-header {
+    margin: .5rem 0;
+    font-size: 1rem;
     background: none;
     border: none;
     font-weight: 600;
@@ -112,6 +115,10 @@ header .button-header {
     flex-flow: row nowrap;
     align-items: center;
     cursor: pointer;
+}
+
+header .button-header-selected {
+    color: var(--white);
 }
 
 header .button-header span {
@@ -138,6 +145,10 @@ header .button-header img {
 }
 
 /* Menu sezioni */
+
+.header-top .menu-sections {
+    margin-bottom: 1rem;
+}
 
 .header-top .menu-sections ul {
     list-style: none;
@@ -170,6 +181,10 @@ header .button-header img {
     list-style: none;
 }
 
+.header-top .playlist li {
+    margin: 1rem 0;
+}
+
 .header-top .playlist a {
     font-weight: 600;
     text-decoration: none;
@@ -178,7 +193,8 @@ header .button-header img {
 
 /* NON FUNZIONA!!!! RIVEDERE */
 .header-top .playlist-list {
-    overflow-y: auto;  
+    overflow-y: auto;
+    max-height: 280px;  
 }
 
 /* Download app */
@@ -190,13 +206,14 @@ header .button-header img {
 /* Riga orizzontale Header */
 
 .header-bottom hr {
-    margin: .5rem 0;
+    margin: .8rem 0;
     color: var(--lightgrey)
 }
 
 /* Utente */
 
 .header-bottom .user {
+    margin-bottom: .5rem;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
