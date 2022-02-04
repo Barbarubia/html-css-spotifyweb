@@ -8,6 +8,45 @@
 
 /* REGOLE GENERALI */
 
+:root {
+    --black: #000000;
+    --semiblack: rgba(0,0,0,.5);
+    --grey: #282828;
+    --darkblue: #141922;
+}
+
 html {
     font-family: 'Montserrat', sans-serif;
+}
+
+/* CONTENITORI DELLE VARIE SEZIONI */
+
+header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 5rem);
+    height: 5rem;
+    background-color: var(--semiblack);
+}
+
+.container-flex {
+    display: flex;
+}
+
+aside {
+    width: 5rem;
+    background-color: var(--black);
+    height: calc(100vh - 5rem);
+}
+
+main {
+    background-color: var(--darkblue);
+    height: calc(100vh - 5rem);
+}
+
+footer {
+    width: 100%;
+    height: 5rem;
+    background-color: var(--grey);
 }
