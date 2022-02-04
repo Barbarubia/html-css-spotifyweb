@@ -14,6 +14,7 @@
     --black: #000000;
     --semiblack: rgba(0,0,0,.5);
     --grey: #282828;
+    --lightgrey: #696969;
     --darkblue: #141922;
     --white: #ffffff;
 }
@@ -89,6 +90,32 @@ footer { /* Barra dei comandi in basso */
 
 /* HEADER LATERALE */
 
+header .logo {
+    height: 5rem;
+}
+
 header .logo img {
     width: 150px;
+}
+
+header .menu-sections ul {
+    list-style: none;
+}
+
+header .menu-sections li {
+    margin: .5rem 0;
+}
+
+header .menu-sections .button-menu-sections {
+    background: none;
+    border: none;
+    color: var(--lightgrey);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    cursor: pointer;
+}
+
+header .menu-sections .button-menu-sections img {
+    height: 25px;
 }
