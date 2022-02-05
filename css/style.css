@@ -117,9 +117,6 @@ header .button-header {
     cursor: pointer;
 }
 
-header .button-header-selected {
-    color: var(--white);
-}
 
 header .button-header span {
     margin-left: .5rem;
@@ -127,6 +124,27 @@ header .button-header span {
 
 header .button-header img {
     height: 25px;
+}
+
+header .button-header svg {
+    height: 25px;
+    fill: var(--lightgrey);
+}
+
+header .button-header-selected svg {
+    fill: var(--white);
+}
+
+header .button-header-selected span {
+    color: var(--white);
+}
+
+header .button-header:hover svg {
+    fill: var(--white);
+}
+
+header .button-header:hover span {
+    color: var(--white);
 }
 
 .header-top {
@@ -180,6 +198,10 @@ header .button-header img {
     align-items: center;
 }
 
+header .button-header:hover .button-plus {
+    background-color: var(--white);
+}
+
 .header-top .playlist ul {
     list-style: none;
 }
@@ -194,6 +216,10 @@ header .button-header img {
     color: var(--lightgrey);
 }
 
+.header-top .playlist a:hover {
+    color: var(--white);
+}
+
 /* NON FUNZIONA!!!! RIVEDERE */
 .header-top .playlist-list {
     overflow-y: auto; 
@@ -201,8 +227,8 @@ header .button-header img {
 
 /* Download app */
 
-.header-bottom .button-download img {
-    height: 15px;
+.header-bottom .button-download svg {
+    height: 20px;
 }
 
 /* Riga orizzontale Header */
@@ -229,6 +255,7 @@ header .button-header img {
 }
 
 .header-bottom .user span {
+    text-decoration: none;
     font-weight: 600;
     color: var(--white);
     margin-left: .5rem;
