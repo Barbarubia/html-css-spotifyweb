@@ -169,7 +169,7 @@ header .button-header img {
 .header-top .playlist .button-plus {
     height: 35px;
     width: 35px;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     background-color: var(--lightgrey);
     color: var(--black);
     display: flex;
@@ -221,6 +221,7 @@ header .button-header img {
 
 .header-bottom .user img {
     height: 25px;
+    width: 25px;
     background-color: var(--lightgrey);
     border-radius: 50%;
 }
@@ -229,4 +230,42 @@ header .button-header img {
     font-weight: 600;
     color: var(--white);
     margin-left: .5rem;
+}
+
+
+
+/* SEZIONE MAIN */
+
+
+
+/* SEZIONE FOOTER */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .info-track {
+    height: 3rem;
+    flex-basis: 15rem;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    background-color: red;
+}
+
+footer .player-audio {
+    height: 4rem;
+    flex-basis: 40rem;
+    flex-shrink: 1;
+    justify-content: center;
+    background-color: red;
+}
+
+footer .volume {
+    height: 3rem;
+    flex-basis: 15rem;
+    flex-shrink: 0;
+    justify-content: flex-end;
+    background-color: red;
 }
