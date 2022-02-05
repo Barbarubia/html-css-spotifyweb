@@ -83,7 +83,7 @@ footer { /* Barra dei comandi in basso */
     border: 1px solid var(--white);
     border-radius: 3rem;
     margin-right: 2rem;
-    padding: .5em 3em;
+    padding: 1em 3em;
     cursor: pointer;
 }
 
@@ -130,6 +130,9 @@ header .button-header img {
 }
 
 .header-top {
+    min-height: 400px;
+    max-height: 600px;
+    overflow: hidden;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -193,8 +196,7 @@ header .button-header img {
 
 /* NON FUNZIONA!!!! RIVEDERE */
 .header-top .playlist-list {
-    overflow-y: auto;
-    max-height: 280px;  
+    overflow-y: auto; 
 }
 
 /* Download app */
@@ -246,13 +248,56 @@ footer {
     align-items: center;
 }
 
+/* Info brano in riproduzione */
+
 footer .info-track {
     height: 3rem;
+    padding-left: .5rem;
     flex-basis: 15rem;
     flex-shrink: 0;
+    display: flex;
     justify-content: flex-start;
-    background-color: red;
+    align-items: center;
 }
+
+footer .info-track img {
+    height: 100%;
+}
+
+footer .info-track .track-artist-and-name {
+    margin-left: .5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+footer .info-track .track-artist {
+    font-size: .9rem;
+    font-weight: 800;
+    color: var(--white);
+}
+
+footer .info-track .track-name {
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--lightgrey);
+}
+
+footer .info-track .icon-buttons {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+footer .info-track .icon-button-small {
+    background: none;
+    border: none;
+    margin: .4rem;
+    font-size: 1.2rem;
+    color: var(--lightgrey);
+    cursor: pointer;
+}
+
+/* Comandi del player audio */
 
 footer .player-audio {
     height: 4rem;
@@ -261,6 +306,8 @@ footer .player-audio {
     justify-content: center;
     background-color: red;
 }
+
+/* Controllo volume */
 
 footer .volume {
     height: 3rem;
