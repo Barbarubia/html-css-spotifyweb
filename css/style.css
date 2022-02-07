@@ -272,6 +272,73 @@ main {
     flex-flow: column nowrap;
 }
 
+main > * { /* margine inferiore a tutti i figli diretti del blocco main */
+    margin-bottom: 5rem;
+}
+
+main h2 {
+    margin-bottom: 1rem;
+}
+
+main p {
+    margin-bottom: 1rem;
+    color: var(--lightgrey);
+    font-weight: 600;
+}
+
+main .cards-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem 1rem;
+    margin-top: 2rem;
+}
+
+main .cards-container .card {
+    width: calc((100% - 5rem) / 6);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: .5rem;
+}
+
+main .cards-container .card .track-cover {
+    position: relative;
+}
+
+main .cards-container .card .track-cover img {
+    width: 100%;
+}
+
+main .cards-container .card .track-cover .img-border-rounded {
+    border-radius: 50%;
+}
+
+main .cards-container .card:hover {
+    cursor: pointer;
+}
+
+main .cards-container .card:hover .track-cover img{
+    filter: brightness(60%);
+}
+
+main .cards-container .card .track-cover .card-hover-effect {
+    display: none;
+}
+
+main .cards-container .card:hover .track-cover .card-hover-effect {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+}
+
+main .cards-container .card h3 {
+    text-align: center;
+}
+
 /* Navbar della sezione main */
 
 main .menu-main {
@@ -279,7 +346,7 @@ main .menu-main {
     display: flex;
     flex-flow: row wrap;
     flex: 0 0;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
 }
 
 main .menu-main ul {
@@ -322,57 +389,6 @@ main .menu-main li .page-not-displayed {
     display: none;
 }
 
-main .cards-container {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    gap: 2rem 1rem;
-}
-
-main .cards-container .card {
-    background-color: red;
-    width: calc((100% - 5rem) / 6);
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-}
-
-main .cards-container .card .track-cover {
-    position: relative;
-}
-
-main .cards-container .card .track-cover img{
-    width: 100%;
-}
-
-main .cards-container .card:hover .track-cover img{
-    filter: brightness(60%);
-}
-
-main .cards-container .card .track-cover .card-hover-effect{
-    display: none;
-}
-
-main .cards-container .card:hover .track-cover .card-hover-effect{
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 5rem;
-}
-
-/* Sezione dei brani riprodotti recentemente */
-
-main .recently-played {
-    margin-bottom: 4rem;
-}
-
-/* Sezione delle playlist suggerite */
-
-main .suggested-playlists {
-    margin-bottom: 4rem;
-}
 
 
 /* SEZIONE FOOTER */
