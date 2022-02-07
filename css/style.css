@@ -322,6 +322,46 @@ main .menu-main li .page-not-displayed {
     display: none;
 }
 
+main .cards-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem 1rem;
+}
+
+main .cards-container .card {
+    background-color: red;
+    width: calc((100% - 5rem) / 6);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+main .cards-container .card .track-cover {
+    position: relative;
+}
+
+main .cards-container .card .track-cover img{
+    width: 100%;
+}
+
+main .cards-container .card:hover .track-cover img{
+    filter: brightness(60%);
+}
+
+main .cards-container .card .track-cover .card-hover-effect{
+    display: none;
+}
+
+main .cards-container .card:hover .track-cover .card-hover-effect{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+}
+
 /* Sezione dei brani riprodotti recentemente */
 
 main .recently-played {
