@@ -40,17 +40,8 @@
 
         :root {
             --footer-height: 6rem;
-            --banner-height: 6rem;
             --header-width: 15rem;
-        }
-
-        .banner { /* Banner in alto con collegamento a premium */
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: calc(100% - var(--header-width));
-            height: var(--banner-height);
-            z-index: 9; /* togliendo lo z-index il footer si sovrappone quando restringo verticalmente la pagina --> effetto richiesto da Henri come bonus durante la lezione del 07 febbraio */
+            --banner-height: 6rem;
         }
 
         header { /* Header impostato verticalmente a destra */
@@ -73,32 +64,13 @@
             background-color: var(--grey);
         }
 
-
-
-/* BANNER IN ALTO CON COLLEGAMENTO A PREMIUM */
-
-        .banner {
-            background-color: var(--semiblack);
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-        }
-
-        .banner button {
-            font-size: .7rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            color: var(--white);
-            background: none;
-            border: 1px solid var(--white);
-            border-radius: 3rem;
-            margin-right: 2rem;
-            padding: 1em 3em;
-            cursor: pointer;
-        }
-
-        .banner button:hover {
-            transform: scale(1.1);
+        .banner { /* Banner in alto con collegamento a premium */
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: calc(100% - var(--header-width));
+            height: var(--banner-height);
+            z-index: 9; /* togliendo lo z-index il footer si sovrappone quando restringo verticalmente la pagina --> effetto richiesto da Henri come bonus durante la lezione del 07 febbraio */
         }
 
 
@@ -527,3 +499,31 @@
                 background-color: var(--lightgrey);
                 border-radius: 5px;
             }
+
+
+
+/* BANNER IN ALTO CON COLLEGAMENTO A PREMIUM */
+
+        .banner {
+            background-color: var(--semiblack);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .banner button {
+            font-size: .8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--white);
+            background: none;
+            border: 1px solid var(--white);
+            border-radius: 3rem;
+            margin-right: 2rem;
+            padding: 1em 3em;
+            cursor: pointer;
+        }
+
+        .banner button:hover {
+            transform: scale(1.1);
+        }
