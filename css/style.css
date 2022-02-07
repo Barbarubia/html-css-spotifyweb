@@ -151,7 +151,11 @@
         }
 
         .header-top .logo img {
-            width: 150px;
+            height: 70%;
+        }
+
+        .header-top .logo .logo-small {
+            display: none;
         }
 
         /* Menu sezioni */
@@ -560,6 +564,14 @@
 @media screen and (max-width: 600px) {
 
     /* HEADER */
+
+    .header-top .logo .logo-big {
+        display: none;
+    }
+
+    .header-top .logo .logo-small {
+        display: inline-block;
+    }
 
     header .button-header span {
         display: none;
