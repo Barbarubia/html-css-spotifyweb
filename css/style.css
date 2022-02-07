@@ -17,6 +17,8 @@
     --lightgrey: #a3a3a3;
     --darkblue: #141922;
     --white: #ffffff;
+    --footer-height: 5rem;
+    --header-width: 15rem;
 }
 
 body {
@@ -37,19 +39,19 @@ html {
     position: absolute;
     top: 0;
     right: 0;
-    width: calc(100% - 15rem);
+    width: calc(100% - var(--header-width));
     height: 5rem;
     z-index: 9;
 }
 
 header { /* Header impostato verticalmente a destra */
-    width: 15rem;
-    height: calc(100vh - 5rem);
+    width: var(--header-width);
+    height: calc(100vh - var(--footer-height));
 }
 
 main { /* Sezione principale della webapp */
-    width: calc(100% - 15rem);
-    height: calc(100vh - 5rem);
+    width: calc(100% - var(--header-width));
+    height: calc(100vh - var(--footer-height));
     background-color: var(--darkblue);
     overflow: auto;
     padding: 6rem 1rem 1rem 1rem;
@@ -59,7 +61,7 @@ footer { /* Barra dei comandi in basso */
     position:absolute;
     bottom: 0;
     width: 100%;
-    height: 5rem;
+    height: var(--footer-height);
     background-color: var(--grey);
 }
 
