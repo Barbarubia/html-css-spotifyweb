@@ -265,6 +265,72 @@ header .button-header:hover .button-plus {
 
 /* SEZIONE MAIN */
 
+main {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/* Navbar della sezione main */
+
+main .menu-main {
+    align-self: center;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 0 0;
+    margin-bottom: 4rem;
+}
+
+main .menu-main ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+main .menu-main li {
+    display: inline-block;
+    position: relative;
+}
+
+main .menu-main .button-menu-main {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--lightgrey);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+main .menu-main .button-menu-main:hover {
+    color: var(--white);
+}
+
+main .menu-main li .page-displayed {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1.5rem;
+    width: 2.5rem;
+    border-bottom: 3px solid #adff2f;
+}
+
+main .menu-main li .page-not-displayed {
+    display: none;
+}
+
+/* Sezione dei brani riprodotti recentemente */
+
+main .recently-played {
+    margin-bottom: 4rem;
+}
+
+/* Sezione delle playlist suggerite */
+
+main .suggested-playlists {
+    margin-bottom: 4rem;
+}
 
 
 /* SEZIONE FOOTER */
@@ -273,6 +339,19 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+footer .icon-button-small {
+    background: none;
+    border: none;
+    margin: .4rem;
+    /* font-size: 1.2rem; */
+    color: var(--lightgrey);
+    cursor: pointer;
+}
+
+footer .icon-button-small:hover {
+    color: var(--white);
 }
 
 /* Info brano in riproduzione */
@@ -308,20 +387,17 @@ footer .info-track .track-name {
     font-size: .8rem;
     font-weight: 600;
     color: var(--lightgrey);
+    text-decoration: none;
+}
+
+footer .info-track .track-name:hover {
+    color: var(--white);
+    text-decoration: underline;
 }
 
 footer .info-track .icon-buttons {
     display: flex;
     flex-flow: row wrap;
-}
-
-footer .info-track .icon-button-small {
-    background: none;
-    border: none;
-    margin: .4rem;
-    font-size: 1.2rem;
-    color: var(--lightgrey);
-    cursor: pointer;
 }
 
 /* Comandi del player audio */
@@ -330,16 +406,57 @@ footer .player-audio {
     height: 4rem;
     flex-basis: 40rem;
     flex-shrink: 1;
-    justify-content: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
     background-color: red;
+}
+
+footer .player-audio .player-buttons {
+    width: 10rem;
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+    align-items: center;
+}
+
+footer .player-audio .button-player {
+    background: none;
+    border: none;
+    color: var(--lightgrey);
+    cursor: pointer;
+}
+
+footer .player-audio .button-player:hover {
+    color: var(--white);
+}
+
+footer .player-audio .button-player-play,
+footer .player-audio .button-player-pause {
+    font-size: 1.7rem;
+}
+
+/* E' possibile fare in modo, senza JS, che quando clicco su play il pulsante si trasforma in pausa e viceversa? */
+footer .player-audio .button-player-pause {
+    display: none;
 }
 
 /* Controllo volume */
 
 footer .volume {
     height: 3rem;
+    padding-right: .5rem;
     flex-basis: 15rem;
     flex-shrink: 0;
+    display: flex;
     justify-content: flex-end;
-    background-color: red;
+    align-items: center;
+}
+
+footer .volume .volume-bar {
+    width: 100%;
+    height: .2rem;
+    background-color: var(--lightgrey);
+    border-radius: 5px;
 }
