@@ -49,7 +49,7 @@
         /* VARIAZIONI ROOT PER MEDIA QUERIES RESPONSIVE */
         @media screen and (max-width: 600px) {
             :root {
-                --header-width: 5rem;
+                --header-width: 4rem;
             }
         }
 
@@ -88,7 +88,7 @@
 
         header {
             background-color: var(--black);
-            padding: 0 1rem;
+            /* padding: 0 1rem; */
             overflow: hidden;
             display: flex;
             flex-flow: column nowrap;
@@ -122,6 +122,10 @@
             fill: var(--lightgrey);
         }
 
+        header .button-header-selected {
+            border-left: 3px solid var(--green);
+        }
+
         header .button-header-selected svg {
             fill: var(--white);
         }
@@ -139,17 +143,20 @@
         }
 
         .header-top {
-            min-height: 400px;
-            max-height: 600px;
+            min-height: 350px;
             overflow: hidden;
             display: flex;
             flex-flow: column nowrap;
             justify-content: flex-start;
         }
 
+        .header-bottom {
+            padding: 0 1rem;
+        }
+
         .header-top .logo {
             height: var(--banner-height);
-            padding: 1rem 0;
+            padding: 1rem 0 0 1rem;
         }
 
         .header-top .logo img {
@@ -174,7 +181,15 @@
                 margin: .5rem 0;
             }
 
+            .header-top .menu-sections .button-header {
+                padding-left: 1rem;
+            }
+
         /* Elenco playlists */
+
+            .header-top .playlist {
+                padding-left: 1rem;
+            }
 
             .header-top .playlist h1 {
                 font-size: 1rem;
@@ -216,7 +231,7 @@
 
             /* NON FUNZIONA!!!! RIVEDERE */
             .header-top .playlist-list {
-                overflow-y: auto; 
+                overflow-y: auto;
             }
 
         /* Download app */
@@ -463,7 +478,6 @@
                 flex-flow: column wrap;
                 justify-content: flex-start;
                 align-items: center;
-                background-color: red;
             }
 
             footer .player-audio .player-buttons {
@@ -495,6 +509,22 @@
                 display: none;
             }
 
+            footer .time-track {
+                display: flex;
+                flex-flow: row nowrap;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            footer .time-track .time-track-played {
+                margin-right: 2rem;
+            }
+
+            footer .time-track .time-track-remain {
+                margin-left: 2rem;
+            }
+
         /* Controllo volume */
 
             footer .volume {
@@ -507,7 +537,7 @@
                 align-items: center;
             }
 
-            footer .volume .volume-bar {
+            footer .bar {
                 width: 100%;
                 height: .2rem;
                 background-color: var(--mediumgrey);
@@ -515,7 +545,9 @@
                 cursor: pointer;
             }
 
-            footer .volume .volume-bar .volume-bar-short {
+        /* Barra del tempo e barra del volume */
+
+            footer .bar .bar-short {
                 width: 30%;
                 background-color: var(--lightgrey);
                 display: flex;
@@ -523,11 +555,11 @@
                 justify-content: flex-end;
             }
 
-            footer .volume .volume-bar:hover .volume-bar-short {
+            footer .bar:hover .bar-short {
                 background-color: var(--green);
             }
 
-            footer .volume .volume-bar:hover .bar-cursor {
+            footer .bar:hover .bar-cursor {
                 height: .8rem;
                 width: .8rem;
                 background-color: var(--lightgrey);
@@ -588,6 +620,12 @@
 
     /* HEADER */
 
+    .header-top {
+        min-height: 200px;
+        align-items: center;
+        flex-grow: 0;
+    }
+
     .header-top .logo {
         height: auto;
         padding: 1rem 0 0 0;
@@ -598,6 +636,7 @@
     }
 
     .header-top .logo .logo-small {
+        width: 100%;
         display: inline-block;
     }
 
