@@ -496,6 +496,7 @@
 
             footer .player-audio .button-player:hover {
                 color: var(--white);
+                transform: scale(1.1);
             }
 
             footer .player-audio .button-player-play,
