@@ -511,10 +511,23 @@
             /* clicco su play il pulsante si trasforma in pausa e     */
             /* viceversa?                                             */
             /*                                                        */
+            /*      FATTO CON :ACTIVE ANCHE SE IL RISULTATO           */
+            /*       NON CORRISPONDE ALL'EFFETTO VOLUTO               */
+            /*                                                        */
             /**********************************************************/
             footer .player-audio .button-player-pause {
                 display: none;
             }
+           
+            footer .player-audio .button-player-play:active {
+                display: none;
+            }
+
+            footer .player-audio .button-player-play:active ~ .button-player-pause {
+                display: inline;
+            }
+            /**********************************************************/
+            /**********************************************************/
             /**********************************************************/
             /**********************************************************/
             /**********************************************************/
