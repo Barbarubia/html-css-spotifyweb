@@ -632,6 +632,10 @@
         flex-shrink: 1;
     }
 
+    footer .player-audio {
+        max-width: 12rem;
+    }
+
     footer .volume {
         flex-shrink: 1;
     }
@@ -712,5 +716,12 @@
 
     footer .volume {
         flex-shrink: 1;
+    }
+
+    footer .bar:hover .bar-cursor {
+        height: .4rem;
+        width: .4rem;
+        background-color: var(--lightgrey);
+        border-radius: 50%;
     }
 }
