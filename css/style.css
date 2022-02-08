@@ -79,7 +79,6 @@
             right: 0;
             width: calc(100% - var(--header-width));
             height: var(--banner-height);
-            z-index: 9; /* togliendo lo z-index il footer si sovrappone quando restringo verticalmente la pagina --> effetto richiesto da Henri come bonus durante la lezione del 07 febbraio */
         }
 
 
@@ -405,6 +404,7 @@
             justify-content: space-between;
             align-items: center;
             overflow: hidden;
+            z-index: 9; /* restringendo verticalmente sovrappone il footer al banner dell'upgrade premium */
         }
 
         footer .icon-button-small {
