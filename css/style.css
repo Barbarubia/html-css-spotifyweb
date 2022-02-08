@@ -126,6 +126,7 @@
         }
 
         header .button-header-selected svg {
+            margin-left: -3px; /* riprende i 3px occupati dal bordino verde */
             fill: var(--white);
         }
 
@@ -181,7 +182,7 @@
 
             .header-top .menu-sections .button-header {
                 padding-left: 1rem;
-            }
+            }    
 
         /* Elenco playlists */
 
