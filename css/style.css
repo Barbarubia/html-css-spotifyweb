@@ -47,7 +47,7 @@
         }
 
         /* VARIAZIONI ROOT PER MEDIA QUERIES RESPONSIVE */
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 540px) {
             :root {
                 --header-width: 4rem;
             }
