@@ -588,7 +588,7 @@
             background-color: var(--semiblack);
             display: flex;
             justify-content: flex-end;
-            align-items: center;
+            align-items: center;   
         }
 
         .banner button {
@@ -602,6 +602,21 @@
             margin-right: 2rem;
             padding: 1em 3em;
             cursor: pointer;
+            display: flex;
+            animation: left2right 4s linear;
+        }
+        @keyframes left2right {
+            0% {
+                flex-grow: 1;
+                border-color: var(--green);
+                color: var(--green);
+            }
+
+            100% {
+                flex-grow: 0;
+                border-color: var(--white);
+                color: var(--white);
+            }
         }
 
         .banner button:hover {
