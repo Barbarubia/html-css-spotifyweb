@@ -424,9 +424,9 @@
 
             footer .info-track {
                 height: 3rem;
-                padding-left: .5rem;
                 margin-right: 1rem;
-                width: 15rem;
+                padding-left: .5rem;
+                flex-basis: 15rem;
                 flex-shrink: 0;
                 display: flex;
                 justify-content: flex-start;
@@ -470,7 +470,7 @@
 
             footer .player-audio {
                 height: 4rem;
-                width: 45%;
+                flex-basis: 30rem;
                 flex-shrink: 1;
                 display: flex;
                 flex-flow: column wrap;
@@ -541,7 +541,7 @@
                 height: 3rem;
                 margin-left: 1rem;
                 padding-right: .5rem;
-                width: 15rem;
+                flex-basis: 15rem;
                 flex-shrink: 0;
                 display: flex;
                 justify-content: flex-end;
@@ -625,6 +625,14 @@
     main .cards-container .card {
         width: calc((100% - 1rem) / 2);
         flex-grow: 1;
+    }
+
+    footer .info-track {
+        flex-shrink: 1;
+    }
+
+    footer .volume {
+        flex-shrink: 1;
     }
     
 }
