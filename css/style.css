@@ -636,7 +636,7 @@
     }
 
     .header-top {
-        min-height: 0;
+        min-height: auto;
         align-items: center;
         flex-grow: 0;
     }
