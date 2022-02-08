@@ -197,6 +197,7 @@
             }
 
             .header-top .playlist .button-plus {
+                margin-left: 0;
                 height: 35px;
                 width: 35px;
                 font-size: 1.9rem;
@@ -393,10 +394,6 @@
                 height: 1.5rem;
                 width: 2.5rem;
                 border-bottom: 3px solid var(--green);
-            }
-
-            main .menu-main li .page-not-displayed {
-                display: none;
             }
 
 
