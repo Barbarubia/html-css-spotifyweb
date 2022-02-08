@@ -470,12 +470,13 @@
 
             footer .player-audio {
                 height: 4rem;
-                flex-basis: 30rem;
+                flex-basis: 50rem;
                 flex-shrink: 1;
                 display: flex;
-                flex-flow: column wrap;
+                flex-flow: column nowrap;
                 justify-content: flex-start;
                 align-items: center;
+                gap: .3rem;
             }
 
             footer .player-audio .player-buttons {
